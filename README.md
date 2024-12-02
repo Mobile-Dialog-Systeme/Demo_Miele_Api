@@ -60,6 +60,6 @@ See [main.py](./main.py)
 The Mile API Object is usable after the line
 ` # Finally you can do stuff with the API`
 
-IF you need more different Actions from the [Miele-API](https://www.miele.com/developer/swagger-ui/index.html)   you will likely have to add new functions to the API-Class. 
+If you need more different Actions from the [Miele-API](https://www.miele.com/developer/swagger-ui/index.html)   you will likely have to add new functions to the API-Class. 
 See [MieleAPI Class](./miele_api.py) for inspiration.
 
