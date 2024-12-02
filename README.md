@@ -14,13 +14,29 @@ Modify the config.py file according to your needs.
 
 register at https://www.miele.com/f/com/en/register_api.aspx
 make sure to save the `client_id` and `client_secret` , you will only see it once.
-(maybe you print it ? )
+(Consider printing them for safekeeping.)
 
 ## create virtual environment
 ```bash
 python -m venv venv
 ```
+## activate the virtual environment
 
+On Windows (Command Prompt):
+```bash
+venv\Scripts\activate
+```
+On Windows (PowerShell):
+```bash
+venv\Scripts\Activate.ps1
+```
+On macOS/Linux:
+```bash
+source venv/bin/activate
+
+```
+
+> 💡 **Hint:** Many popular IDEs, such as VS Code and PyCharm, allow you to select the Python interpreter associated with your virtual environment. Doing so will automatically activate the environment for you when you open the project or run scripts.
 ## install dependencies
 ```bash
 pip install -r requirements.txt
