@@ -11,10 +11,12 @@ Modify the config.py file according to your needs.
 (at least `client_id`, `client_secret`)
 
 #### if necessary you need to create a new account
-
+  
 register at https://www.miele.com/f/com/en/register_api.aspx
 make sure to save the `client_id` and `client_secret` , you will only see it once.
 (Consider printing them for safekeeping.)
+
+> 🔬 **Note:** If you are part of the MDS Lab or enrolled in one of our courses, we will provide the necessary credentials for you.
 
 ## create virtual environment
 ```bash
