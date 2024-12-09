@@ -5,6 +5,7 @@ import webbrowser
 from oauth_client import OAuthClient
 from miele_api import MieleAPI
 from local_server import TempServer
+import time
 
 logging.basicConfig(level=logging.INFO)
 # use DEBUG to see the log messages from requests and oauthlib
@@ -61,7 +62,11 @@ def main():
 
     # Finally you can do stuff with the API
     devices_info = miele_api.get_devices()
-    miele_api.turn_device_on()
+    # miele_api.turn_device_on()
+    for _ in range(20):
+        miele_api.turn_on_light()
+        time.sleep(2)
+        miele_api.turn_off_light()
 
     print(f" you have {len(devices_info)} devices")
     log.info(f"Devices: {devices_info}")

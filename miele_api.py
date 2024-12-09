@@ -36,6 +36,23 @@ class MieleAPI:
 
         return response
 
+    def turn_on_light(self, device_name="default") -> requests.Response:
+        return self.set_light(device_name, 1)
+
+    def turn_off_light(self, device_name="default") -> requests.Response:
+        return self.set_light(device_name, 2)
+
+    def set_light(self, device_name="default", state=1) -> requests.Response:
+        """
+        Sets the light state of the specified device.
+        """
+        device_id = self.devices.get(device_name, self.default_device)
+        url = f"{self.base_url}/devices/{device_id}/actions"
+        data = {"light": state}
+        response: requests.Response = self.session.put(url, json=data)
+        log.info(f"Set light state response: {response.status_code}")
+        return response
+
     def turn_device_on(self, device_name="default", power_on=True) -> requests.Response:
         """
         Turns on the specified device.
