@@ -63,7 +63,7 @@ def main():
     # Finally you can do stuff with the API
     devices_info = miele_api.get_devices()
     # miele_api.turn_device_on()
-    for _ in range(20):
+    for _ in range(10):
         miele_api.turn_on_light()
         time.sleep(2)
         miele_api.turn_off_light()

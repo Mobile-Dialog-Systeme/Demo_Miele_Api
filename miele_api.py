@@ -27,7 +27,7 @@ class MieleAPI:
 
         return response.json()
 
-    def start_program(self, device_name, program_id) -> requests.Response:
+    def start_program(self, program_id, device_name="default") -> requests.Response:
         device_id = self.devices.get(device_name, self.default_device)
         url = f"{self.base_url}/devices/{device_id}/programs"
         data = {"programId": program_id}
